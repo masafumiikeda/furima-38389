@@ -24,8 +24,8 @@
 |category_id       |integer   |null: false                  |
 |status_id         |integer   |null: false                  |
 |delivery_id       |integer   |null: false                  |
-|sender_id         |integer   |null: false                  |
-|date_id           |integer   |null: false                  |
+|prefecture_id     |integer   |null: false                  |
+|days_id           |integer   |null: false                  |
 |price             |integer   |null: false                  |
 |user              |references|null: false, foreign_key:true|
 
@@ -35,8 +35,8 @@
 - belongs_to :category
 - belongs_to :status
 - belongs_to :delivery
-- belongs_to :sender
-- belongs_to :date
+- belongs_to :prefecture
+- belongs_to :days
 
 ## buyersテーブル
 
