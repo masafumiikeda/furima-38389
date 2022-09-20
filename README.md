@@ -36,7 +36,7 @@
 - belongs_to :status
 - belongs_to :delivery
 - belongs_to :prefecture
-- belongs_to :date
+- belongs_to :days
 
 ## buyersテーブル
 
