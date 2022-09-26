@@ -8,8 +8,7 @@ class Item < ApplicationRecord
   belongs_to :prefecture
   belongs_to :duration
 
-  validates :name, :description, presence: true
-  validates :price, presence:true, numericality: { in: 300..9999999 }
+  validates :name, :description, :price, presence: true
   validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}
   validates :status_id, numericality: { other_than: 1 , message: "can't be blank"} 
   validates :delivery_id, numericality: { other_than: 1 , message: "can't be blank"}
