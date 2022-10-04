@@ -60,11 +60,6 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Token can't be blank")
       end
-      #it 'userが紐付いていないと保存できないこと' do
-      #  @donation_address.user_id = nil
-      #  @donation_address.valid?
-      #  expect(@donation_address.errors.full_messages).to include("User can't be blank")
-      #end
     end
   end
 end
