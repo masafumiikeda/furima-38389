@@ -63,7 +63,6 @@ RSpec.describe OrderAddress, type: :model do
       it '電話番号は英数混合では購入できないこと' do
         @order_address.phone_number = '111----oooo'
         @order_address.valid?
-        binding.pry
         expect(@order_address.errors.full_messages).to include("Phone number is invalid")
       end
       it "tokenが空では購入できないこと" do
