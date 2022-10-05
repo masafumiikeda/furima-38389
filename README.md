@@ -13,7 +13,7 @@
 
 ### Association
 - has_many :items
-- has_many :buyers
+- has_many :orders
 
 ## itemsテーブル
 
@@ -31,14 +31,14 @@
 
 ### Association
 - belongs_to :user
-- has_one :buyer
+- has_one :order
 - belongs_to :category
 - belongs_to :status
 - belongs_to :delivery
 - belongs_to :prefecture
 - belongs_to :duration
 
-## buyersテーブル
+## ordersテーブル
 
 |Column            |Type      |Options                      |
 |------------------|----------|-----------------------------|
@@ -60,8 +60,8 @@
 |address           |string    |null: false                  |
 |building          |string    |                             |
 |phone_number      |string    |null: false                  |
-|buyer             |references|null: false, foreign_key:true|
+|order             |references|null: false, foreign_key:true|
 
 ### Association
-- belongs_to :buyer
+- belongs_to :order
 - belongs_to :prefecture

@@ -1,13 +1,13 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
-  has_one_attached :image
   belongs_to :user
-  has_one    :buyer
+  has_one    :order
   belongs_to :category
   belongs_to :status
   belongs_to :delivery
   belongs_to :prefecture
   belongs_to :duration
+  has_one_attached :image
 
   validates :name, :description, :image, presence: true
   validates :price, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999}
